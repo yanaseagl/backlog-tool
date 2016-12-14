@@ -1,6 +1,6 @@
 ﻿namespace backlogToolMain
 {
-    partial class Form1
+    partial class ticketForm
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.getStartBtn = new System.Windows.Forms.Button();
+            this.ticketArea = new System.Windows.Forms.Panel();
+            this.ticketLabel = new System.Windows.Forms.Label();
+            this.ticketArea.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // getStartBtn
+            // 
+            this.getStartBtn.Location = new System.Drawing.Point(12, 12);
+            this.getStartBtn.Name = "getStartBtn";
+            this.getStartBtn.Size = new System.Drawing.Size(75, 23);
+            this.getStartBtn.TabIndex = 0;
+            this.getStartBtn.Text = "チケット取得";
+            this.getStartBtn.UseVisualStyleBackColor = true;
+            this.getStartBtn.Click += new System.EventHandler(this.getStartBtn_Click);
+            // 
+            // ticketArea
+            // 
+            this.ticketArea.Controls.Add(this.ticketLabel);
+            this.ticketArea.Location = new System.Drawing.Point(12, 41);
+            this.ticketArea.Name = "ticketArea";
+            this.ticketArea.Size = new System.Drawing.Size(641, 469);
+            this.ticketArea.TabIndex = 1;
+            // 
+            // ticketLabel
+            // 
+            this.ticketLabel.AutoSize = true;
+            this.ticketLabel.Location = new System.Drawing.Point(3, 15);
+            this.ticketLabel.Name = "ticketLabel";
+            this.ticketLabel.Size = new System.Drawing.Size(35, 12);
+            this.ticketLabel.TabIndex = 0;
+            this.ticketLabel.Text = "label1";
+            // 
+            // ticketForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(665, 522);
+            this.Controls.Add(this.ticketArea);
+            this.Controls.Add(this.getStartBtn);
+            this.Name = "ticketForm";
+            this.Text = "チケット画面";
+            this.ticketArea.ResumeLayout(false);
+            this.ticketArea.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button getStartBtn;
+        private System.Windows.Forms.Panel ticketArea;
+        private System.Windows.Forms.Label ticketLabel;
     }
 }
 
